@@ -1,0 +1,54 @@
+﻿@using GYPSEA.Models
+
+@model List<UsersPO>
+
+@{
+    ViewBag.Title = "ViewUsers";
+}
+
+<html>
+<body>
+    <h1>List of Users</h1>
+    @if ((int?)Session["RoleID"] <= 2)
+    {
+        @Html.ActionLink("Add New User", "AddUser", "Users")
+    }
+    <table border="1" width="100%">
+        <tr>
+            <th>User Name</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State/Providence</th>
+            <th>PostalCode</th>
+            <th>Country</th>
+            <th>Role</th>
+        </tr>
+        @foreach (UsersPO displayObject in Model)
+        {
+            <tr>
+                <td>@displayObject.UserName</td>
+                <td>@displayObject.LastName</td>
+                <td>@displayObject.FirstName</td>
+                <td>@displayObject.Email</td>
+                <td>@displayObject.Address</td>
+                <td>@displayObject.City</td>
+                <td>@displayObject.StateProvidence</td>
+                <td>@displayObject.PostalCode</td>
+                <td>@displayObject.Country</td>
+                <td>@displayObject.RoleName</td>
+                @if ((int?)Session["RoleID"] == 1)
+                {
+                    <td>@Html.ActionLink("Update", "UpdateUser", "Users", new { UserID = displayObject.UserID }, null)</td>
+                    <td>@Html.ActionLink("Delete", "DeleteUser", "Users", new { UserID = displayObject.UserID }, new { @onclick = "return confirm('Are you sure you want to delete?')" })</td>
+                }
+            </tr>
+        }
+    </table>
+</body>
+</html>
+
+
+

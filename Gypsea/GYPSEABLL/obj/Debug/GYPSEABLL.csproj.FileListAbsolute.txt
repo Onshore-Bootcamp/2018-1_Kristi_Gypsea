@@ -1,0 +1,6 @@
+C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEABLL\bin\Debug\GYPSEABLL.dll
+C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEABLL\bin\Debug\GYPSEABLL.pdb
+C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEABLL\obj\Debug\GYPSEABLL.csproj.CoreCompileInputs.cache
+C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEABLL\obj\Debug\GYPSEABLL.dll
+C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEABLL\obj\Debug\GYPSEABLL.pdb
+C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEABLL\obj\Debug\GYPSEABLL.csprojResolveAssemblyReference.cache

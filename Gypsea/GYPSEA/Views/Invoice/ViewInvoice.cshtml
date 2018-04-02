@@ -1,0 +1,51 @@
+﻿@using GYPSEA.Models
+@model List<InvoicePO>
+@{
+    ViewBag.Title = "ViewInvoice";
+}
+
+<h1>ViewInvoice</h1>
+@if ((int?)Session["RoleID"] <= 2)
+{
+    @Html.ActionLink("Add New Invoice", "AddInvoice", "Invoice")
+}
+<table border="1" width="100%">
+    <tr>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State/Providence</th>
+        <th>Country</th>
+        <th>Postal Code</th>
+        <th>Date of Charter</th>
+        <th>Return Date</th>
+        <th>Cost per Day</th>
+        <th>Amount Due</th>
+    </tr>
+    @foreach (InvoicePO displayObject in Model)
+    {
+        <tr>
+            <td>@displayObject.LastName</td>
+            <td>@displayObject.FirstName</td>
+            <td>@displayObject.Address</td>
+            <td>@displayObject.City</td>
+            <td>@displayObject.StateProvidence</td>
+            <td>@displayObject.Country</td>
+            <td>@displayObject.PostalCode</td>
+            <td>@displayObject.DateChartered</td>
+            <td>@displayObject.DateReturned</td>
+            <td>@displayObject.CostperDay</td>
+            <td>@displayObject.AmountDue</td>
+            @if ((int?)Session["RoleID"] <= 2)
+            {
+                <td>@Html.ActionLink("Update", "UpdateInvoice", "Invoice", new { InvoiceID = displayObject.InvoiceID }, null)</td>
+            }
+            @if ((int?)Session["RoleID"] == 1)
+            {
+                <td>@Html.ActionLink("Delete", "DeleteInvoice", "Invoice", new { InvoiceID = displayObject.InvoiceID }, new { @onclick="return confirm('Are You sure you want to delete?')"})</td>
+            }
+        </tr>
+    }
+</table>
+

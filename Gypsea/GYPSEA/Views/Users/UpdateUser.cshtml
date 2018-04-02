@@ -1,0 +1,63 @@
+﻿@using GYPSEA.Models
+@model UsersPO
+@{
+    ViewBag.Title = "UpdateUser";
+}
+
+<h2>UpdateUser</h2>
+
+@using (Html.BeginForm("UpdateUser", "Users", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.HiddenFor(model => Model.UserID)
+        </div>
+        @Html.LabelFor(model => Model.UserName)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.UserName, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.Password)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.Password, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.LastName)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.LastName, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.FirstName)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.FirstName, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.Email)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.Email, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.Address)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.Address, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.City)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.City, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.StateProvidence)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.StateProvidence, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.PostalCode)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.PostalCode, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.Country)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.Country, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.RoleID)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.RoleID, new { @class = "form-control" })
+        </div>
+
+        <input type="submit" value="Submit" />
+    </div>
+}
+

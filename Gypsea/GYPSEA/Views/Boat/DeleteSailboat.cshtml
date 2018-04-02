@@ -1,0 +1,17 @@
+﻿@using GYPSEA.Models
+@model BoatPO
+@{
+    ViewBag.Title = "DeleteSailboat";
+}
+
+<h2>DeleteSailboat</h2>
+
+@using (Html.BeginForm(Model))
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.HiddenFor(model => Model.BoatID)
+        </div>
+    </div>
+}
+

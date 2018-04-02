@@ -1,0 +1,74 @@
+﻿@using GYPSEA.Models
+@model InvoicePO
+@{
+    ViewBag.Title = "AddInvoice";
+}
+<script src="~/Scripts/jquery-ui.min.js"></script>
+<link href="~/Content/jQueryUI.css" rel="stylesheet" />
+<script type="text/javascript">
+    $(function () {
+        $("#datepicker").datepicker({ dateFormat: "yy-mm-dd" });
+        $("#datepicker2").datepicker({ dateFormat: "yy-mm-dd" });
+
+        var dateInputs = $('input[type="date"]');
+
+        for (var input in dateInputs) {
+            $(dateInputs[input]).addClass('form-control');
+        }
+    });
+</script>
+
+<h2>AddInvoice</h2>
+
+@using (Html.BeginForm("AddInvoice", "Invoice", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        @Html.LabelFor(model => Model.LastName)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.LastName, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.FirstName)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.FirstName, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.Address)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.Address, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.City)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.City, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.StateProvidence)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.StateProvidence, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.Country)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.Country, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.PostalCode)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.PostalCode, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.DateChartered)
+        <div class="form-group">
+            @Html.EditorFor(model => Model.DateChartered, new { @class = "form-control", @id="datepicker" })
+        </div>
+        @Html.LabelFor(model => Model.DateReturned)
+        <div class="form-group">
+            @Html.EditorFor(model => Model.DateReturned, new { @class = "form-control",@id ="datepicker2" })
+        </div>
+        @Html.LabelFor(model => Model.BoatID)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.BoatID, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.UserID)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.UserID, new { @class = "form-control" })
+        </div>
+
+        <input type="submit" value="Submit" />
+    </div>
+}
+

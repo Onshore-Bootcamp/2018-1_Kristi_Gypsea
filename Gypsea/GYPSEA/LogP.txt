@@ -1,0 +1,97 @@
+﻿[2/25/2018 11:05:10 PM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - Procedure or function 'ADD_INVOICE' expects parameter '@FirstName', which was not supplied.
+   at GYPSEADLL.InvoiceDAO.AddInvoice(InvoiceDO invoice) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\InvoiceDAO.cs:line 124
+   at GYPSEA.Controllers.InvoiceController.AddInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 58
+[2/26/2018 12:11:08 AM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - Cannot update identity column 'InvoiceID'.
+   at GYPSEADLL.InvoiceDAO.UpdateInvoice(InvoiceDO invoice) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\InvoiceDAO.cs:line 168
+   at GYPSEA.Controllers.InvoiceController.UpdateInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 89
+[2/26/2018 12:19:38 AM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - Cannot update identity column 'InvoiceID'.
+   at GYPSEADLL.InvoiceDAO.UpdateInvoice(InvoiceDO invoice) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\InvoiceDAO.cs:line 167
+   at GYPSEA.Controllers.InvoiceController.UpdateInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 89
+[2/26/2018 8:11:11 AM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - Cannot update identity column 'InvoiceID'.
+   at GYPSEADLL.InvoiceDAO.UpdateInvoice(InvoiceDO invoice) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\InvoiceDAO.cs:line 167
+   at GYPSEA.Controllers.InvoiceController.UpdateInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 89
+[2/26/2018 8:22:12 AM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - Cannot update identity column 'InvoiceID'.
+   at GYPSEADLL.InvoiceDAO.UpdateInvoice(InvoiceDO invoice) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\InvoiceDAO.cs:line 167
+   at GYPSEA.Controllers.InvoiceController.UpdateInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 89
+[2/26/2018 8:50:20 AM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Invoice_Users". The conflict occurred in database "GYPSEA", table "dbo.Users", column 'UserID'.
+The statement has been terminated.
+   at GYPSEADLL.InvoiceDAO.AddInvoice(InvoiceDO invoice) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\InvoiceDAO.cs:line 125
+   at GYPSEA.Controllers.InvoiceController.AddInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 58
+[3/1/2018 3:35:11 PM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_USERS_Roles". The conflict occurred in database "GYPSEA", table "dbo.Roles", column 'RoleID'.
+The statement has been terminated.
+   at GYPSEADLL.UsersDAO.AddUser(UsersDO user) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\UsersDAO.cs:line 91
+   at GYPSEA.Controllers.UsersController.Register(RegisterPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 183
+[3/1/2018 3:39:38 PM] - Fatal - GYPSEA - GYPSEA.Models.UsersPO UsersDOtoUsersPO(GYPSEADLL.Models.UsersDO) - Object reference not set to an instance of an object.
+   at GYPSEA.Mapping.UsersMap1.UsersDOtoUsersPO(UsersDO from) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Mapping\UsersMap1.cs:line 15
+   at GYPSEA.Controllers.UsersController.Login(LoginPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 130
+[3/1/2018 3:45:03 PM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_USERS_Roles". The conflict occurred in database "GYPSEA", table "dbo.Roles", column 'RoleID'.
+The statement has been terminated.
+   at GYPSEADLL.UsersDAO.AddUser(UsersDO user) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\UsersDAO.cs:line 91
+   at GYPSEA.Controllers.UsersController.Register(RegisterPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 183
+[3/1/2018 4:05:11 PM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_USERS_Roles". The conflict occurred in database "GYPSEA", table "dbo.Roles", column 'RoleID'.
+The statement has been terminated.
+   at GYPSEADLL.UsersDAO.AddUser(UsersDO user) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\UsersDAO.cs:line 91
+   at GYPSEA.Controllers.UsersController.Register(RegisterPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 183
+[3/1/2018 4:05:49 PM] - Fatal - GYPSEA - GYPSEA.Models.UsersPO UsersDOtoUsersPO(GYPSEADLL.Models.UsersDO) - Object reference not set to an instance of an object.
+   at GYPSEA.Mapping.UsersMap1.UsersDOtoUsersPO(UsersDO from) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Mapping\UsersMap1.cs:line 15
+   at GYPSEA.Controllers.UsersController.Login(LoginPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 130
+[3/1/2018 4:12:02 PM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_USERS_Roles". The conflict occurred in database "GYPSEA", table "dbo.Roles", column 'RoleID'.
+The statement has been terminated.
+   at GYPSEADLL.UsersDAO.AddUser(UsersDO user) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\UsersDAO.cs:line 91
+   at GYPSEA.Controllers.UsersController.Register(RegisterPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 183
+[3/1/2018 4:13:04 PM] - Fatal - GYPSEA - GYPSEA.Models.UsersPO UsersDOtoUsersPO(GYPSEADLL.Models.UsersDO) - Object reference not set to an instance of an object.
+   at GYPSEA.Mapping.UsersMap1.UsersDOtoUsersPO(UsersDO from) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Mapping\UsersMap1.cs:line 15
+   at GYPSEA.Controllers.UsersController.Login(LoginPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 130
+[3/1/2018 4:30:21 PM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_USERS_Roles". The conflict occurred in database "GYPSEA", table "dbo.Roles", column 'RoleID'.
+The statement has been terminated.
+   at GYPSEADLL.UsersDAO.AddUser(UsersDO user) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\UsersDAO.cs:line 91
+   at GYPSEA.Controllers.UsersController.Register(RegisterPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 183
+[3/1/2018 4:37:40 PM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_USERS_Roles". The conflict occurred in database "GYPSEA", table "dbo.Roles", column 'RoleID'.
+The statement has been terminated.
+   at GYPSEADLL.UsersDAO.AddUser(UsersDO user) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\UsersDAO.cs:line 91
+   at GYPSEA.Controllers.UsersController.Register(RegisterPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 183
+[3/1/2018 4:38:07 PM] - Fatal - GYPSEA - GYPSEA.Models.UsersPO UsersDOtoUsersPO(GYPSEADLL.Models.UsersDO) - Object reference not set to an instance of an object.
+   at GYPSEA.Mapping.UsersMap1.UsersDOtoUsersPO(UsersDO from) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Mapping\UsersMap1.cs:line 15
+   at GYPSEA.Controllers.UsersController.Login(LoginPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 130
+[3/3/2018 5:41:05 PM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - Violation of UNIQUE KEY constraint 'IX_Users_UniqueUserName'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (NewGuy                   ).
+The statement has been terminated.
+   at GYPSEADLL.UsersDAO.AddUser(UsersDO user) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\UsersDAO.cs:line 91
+   at GYPSEA.Controllers.UsersController.Register(RegisterPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 183
+[3/6/2018 9:37:34 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult ViewInvoice() - Object reference not set to an instance of an object.
+   at GYPSEA.Controllers.InvoiceController.ViewInvoice() in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 46
+[3/6/2018 9:38:16 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult ViewInvoice() - Object reference not set to an instance of an object.
+   at GYPSEA.Controllers.InvoiceController.ViewInvoice()
+[3/6/2018 9:38:25 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult ViewInvoice() - Object reference not set to an instance of an object.
+   at GYPSEA.Controllers.InvoiceController.ViewInvoice()
+[3/6/2018 9:39:56 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult ViewInvoice() - Object reference not set to an instance of an object.
+   at GYPSEA.Controllers.InvoiceController.ViewInvoice()
+[3/6/2018 9:40:51 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult ViewInvoice() - Specified cast is not valid.
+   at GYPSEA.Controllers.InvoiceController.ViewInvoice()
+[3/11/2018 3:59:08 PM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Invoice_Users". The conflict occurred in database "GYPSEA", table "dbo.Users", column 'UserID'.
+The statement has been terminated.
+   at GYPSEADLL.InvoiceDAO.AddInvoice(InvoiceDO invoice) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\InvoiceDAO.cs:line 124
+   at GYPSEA.Controllers.InvoiceController.AddInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 86
+[3/11/2018 3:59:31 PM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Invoice_Users". The conflict occurred in database "GYPSEA", table "dbo.Users", column 'UserID'.
+The statement has been terminated.
+   at GYPSEADLL.InvoiceDAO.AddInvoice(InvoiceDO invoice) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\InvoiceDAO.cs:line 124
+   at GYPSEA.Controllers.InvoiceController.AddInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 86
+[3/13/2018 10:20:23 AM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - Violation of UNIQUE KEY constraint 'IX_Users_UniqueUserName'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (Guest                    ).
+The statement has been terminated.
+   at GYPSEADLL.UsersDAO.AddUser(UsersDO user) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\UsersDAO.cs:line 91
+   at GYPSEA.Controllers.UsersController.AddUser(UsersPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 60
+[3/13/2018 10:20:51 AM] - Fatal - .Net SqlClient Data Provider - Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action]) - Violation of UNIQUE KEY constraint 'IX_Users_UniqueUserName'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (Guest                    ).
+The statement has been terminated.
+   at GYPSEADLL.UsersDAO.AddUser(UsersDO user) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEADLL\UsersDAO.cs:line 91
+   at GYPSEA.Controllers.UsersController.AddUser(UsersPO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\UsersController.cs:line 60
+[3/13/2018 10:24:22 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult AddInvoice(GYPSEA.Models.InvoicePO) - Object reference not set to an instance of an object.
+   at GYPSEA.Controllers.InvoiceController.AddInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 88
+[3/13/2018 10:25:07 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult AddInvoice(GYPSEA.Models.InvoicePO) - Object reference not set to an instance of an object.
+   at GYPSEA.Controllers.InvoiceController.AddInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 88
+[3/13/2018 10:25:23 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult AddInvoice(GYPSEA.Models.InvoicePO) - Object reference not set to an instance of an object.
+   at GYPSEA.Controllers.InvoiceController.AddInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 88
+[3/13/2018 10:25:31 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult AddInvoice(GYPSEA.Models.InvoicePO) - Object reference not set to an instance of an object.
+   at GYPSEA.Controllers.InvoiceController.AddInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 88
+[3/13/2018 10:25:59 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult AddInvoice(GYPSEA.Models.InvoicePO) - Object reference not set to an instance of an object.
+   at GYPSEA.Controllers.InvoiceController.AddInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 88
+[3/13/2018 10:28:38 AM] - Fatal - GYPSEA - System.Web.Mvc.ActionResult AddInvoice(GYPSEA.Models.InvoicePO) - Object reference not set to an instance of an object.
+   at GYPSEA.Controllers.InvoiceController.AddInvoice(InvoicePO form) in C:\Users\KrisWilliams\source\repos\Gypsea\GYPSEA\Controllers\InvoiceController.cs:line 88

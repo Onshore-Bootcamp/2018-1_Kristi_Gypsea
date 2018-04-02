@@ -1,0 +1,32 @@
+﻿@using GYPSEA.Models
+@model List<KeyValuePair<BoatPO, int>>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1> Gypsea Sailboat Charters</h1>
+    <p class="lead">Gypsea Sailboat Charters is here to fulfill your dreams for a vacation and sailing. We offer a selction of sailboats for you to choose from for the perfect experience.</p>
+</div>
+
+<div class="row">
+    @foreach (KeyValuePair<BoatPO, int> displayObject in Model)
+    {
+    <div class="panelBackground col-md-4">
+        <h2> @displayObject.Key.Model</h2>
+        <p>
+            @displayObject.Key.YearofBoat
+            @displayObject.Key.Length
+            @displayObject.Key.BoatType
+        </p>
+
+        <p>
+            The @displayObject.Key.YearofBoat @displayObject.Key.Model is a very popular boat having over @displayObject.Value invoices since 2016.
+        </p>
+
+        @*<p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+    </div>
+    }
+
+
+</div>

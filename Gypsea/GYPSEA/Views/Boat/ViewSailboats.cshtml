@@ -1,0 +1,44 @@
+﻿@using GYPSEA.Models
+@model List<BoatPO>
+@{
+    ViewBag.Title = "ViewSailboats";
+}
+
+<html>
+<body>
+    <h1>Sailboats available for charter</h1>
+    @if ((int?)Session["RoleID"] == 1)
+    {
+        @Html.ActionLink("Add New Sailboat", "AddSailboats", "Boat")
+    }
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Year</th>
+            <th>Boat Type</th>
+            <th>Length</th>
+            <th>Model</th>
+            <th>Cost</th>
+        </tr>
+        @foreach (BoatPO displayObject in Model)
+        {
+            <tr>
+                <td>@displayObject.YearofBoat</td>
+                <td>@displayObject.BoatType</td>
+                <td>@displayObject.Length</td>
+                <td>@displayObject.Model</td>
+                <td>@displayObject.CostperDay</td>
+                @if ((int?)Session["RoleID"] <= 2)
+                {
+                    <td>@Html.ActionLink("Update", "UpdateSailboat", "Boat", new { BoatID = displayObject.BoatID }, null)</td>
+                }
+                @if ((int?)Session["RoleID"] == 1)
+                {
+                    <td>@Html.ActionLink("Delete", "DeleteSailboat", "Boat", new { BoatID = displayObject.BoatID }, new { @onclick="return confirm('Are you sure you want to delete?')"})</td>
+                }
+            </tr>
+        }
+    </table>
+</body>
+</html>
+

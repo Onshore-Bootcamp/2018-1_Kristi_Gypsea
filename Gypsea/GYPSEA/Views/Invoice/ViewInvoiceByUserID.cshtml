@@ -1,0 +1,39 @@
+﻿@using GYPSEA.Models
+@model List<InvoicePO>
+@{
+    ViewBag.Title = "ViewInvoiceByUserID";
+}
+
+<h2>ViewInvoiceByUserID</h2>
+
+<table border="1" width="100%">
+    <tr>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State/Providence</th>
+        <th>Country</th>
+        <th>Postal Code</th>
+        <th>Date of Charter</th>
+        <th>Return Date</th>
+        <th>Cost per Day</th>
+        <th>Amount Due</th>
+    </tr>
+    @foreach (InvoicePO displayObject in Model)
+    {
+    <tr>
+        <td>@displayObject.LastName</td>
+        <td>@displayObject.FirstName</td>
+        <td>@displayObject.Address</td>
+        <td>@displayObject.City</td>
+        <td>@displayObject.StateProvidence</td>
+        <td>@displayObject.Country</td>
+        <td>@displayObject.PostalCode</td>
+        <td>@displayObject.DateChartered</td>
+        <td>@displayObject.DateReturned</td>
+        <td>@displayObject.CostperDay</td>
+        <td>@displayObject.AmountDue</td>
+    </tr>
+    }
+</table>

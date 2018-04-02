@@ -1,0 +1,35 @@
+﻿@using GYPSEA.Models
+@model BoatPO
+@{
+    ViewBag.Title = "AddSailboats";
+}
+
+<h2>AddSailboats</h2>
+
+@using (Html.BeginForm("AddSailboats", "Boat", FormMethod.Post))
+{
+    <div class=" form-horizontal">
+        @Html.LabelFor(model => Model.YearofBoat)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.YearofBoat, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.BoatType)
+        <div class=" form-group">
+            @Html.DropDownListFor(model => Model.BoatType, new SelectList(new[] { "Catamaran", "Center Cockpit", "Cutter", "Pilothouse", "Sloop", "Ketch", "Yawl", "Schooner", "Catboat", "Trimaran" }),"Choose boat type", new { @class = "form-control"})
+        </div>
+        @Html.LabelFor(model => Model.Length)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.Length, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.Model)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.Model, new { @class = "form-control" })
+        </div>
+        @Html.LabelFor(model => Model.CostperDay)
+        <div class="form-group">
+            @Html.TextBoxFor(model => Model.CostperDay, new { @class = "form-control" })
+        </div>
+
+        <input type="submit" value="Submit" />
+    </div>
+}
